@@ -4,23 +4,15 @@
 
 
 function cakes (recipe, available){
-    let newObj = Object.keys(recipe).reduce((a, k) => {
+    var newObj = Object.keys(recipe).reduce((a, k) => {
        a[k] = available[k]/recipe[k];
+       
        return a; 
     }, {});
     
     let answer =  parseInt((Math.min(... Object.values(newObj)))) ;
-    console.log(answer);
-    // closer = parseInt(Math.min(...nearlyThere));
-    // console.log(nearlyThere);
-    // console.log(closer);
-    // console.log(newObj);
-    // // if (nearlyThere.includes(2.4)) {
-    // //     console.log('✅ String is contained in Array');
-    // //   } else {
-    // //     console.log('⛔️ String is NOT contained in Array');
-    //   }
+    if (isNaN(answer)){
+        return 0;
     }
-    let recipe = {flour: 500, sugar: 200, eggs: 1};
-    let available = {flour: 1200, sugar: 1200, eggs: 5, milk: 200}; 
-    cakes (recipe,available);
+    else{return answer};
+}
