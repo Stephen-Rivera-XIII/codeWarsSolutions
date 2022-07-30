@@ -26,3 +26,5 @@ busStops(number);
 //         }
 //         return answer;
 //     }
+
+// evidently this didn't need to be able to read in the arrays as their own variables; could have just read in busStops as the array itself
