@@ -12,3 +12,5 @@ function duplicateEncode(str) {
     let answer = stack.join('');
     return answer;
 }
+
+duplicateEncode("ballSack");
